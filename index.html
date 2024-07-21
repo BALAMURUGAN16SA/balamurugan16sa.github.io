@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balamurugan S - Portfolio</title>
+    <link rel="icon" href="images/ICON.png" type="image/x-icon" sizes="48x48">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "3aQ5LocUj9HkkBQ3z",
+        });
+    })();
+    </script>
+    
+
+    <style>
+        body {
+            background-color: #131a1b;
+            font-family: 'Courier New', Courier, monospace; 
+        }
+        
+        .container {
+            margin-top: 5vh;
+        }
+
+        img, .name, .head-p {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        img:hover, .name:hover, .head-p:hover {
+            transform: scale(1.1);
+        }
+        .navbar {
+            background-color: #000000;
+        }
+        .nav-link {
+            border: 1px solid #128C7E;
+        }
+        .nav-item:hover {
+            background-color: #075E54;
+            color: antiquewhite;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 20%;
+            border: 1px solid grey;
+            box-shadow: 0 1px 7px antiquewhite;
+            color: antiquewhite;
+        }
+        .typed-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 5s steps(30, end);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .additional-text {
+            margin-top: 1.5rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            font-size: 1.2rem;
+            animation: popUp 3s forwards;
+        }
+
+        @keyframes typing {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+        @keyframes popUp {
+            from {
+                
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to {
+                display: block;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .projects .container{
+            height: auto;
+            border: 1px solid grey;
+            box-shadow: 0 1px 7px antiquewhite;
+            color: antiquewhite;
+        }
+        .bg{
+            border: 1px solid gray;
+        }
+        .mon{
+            border: 1px solid #128C7E;
+            background-color: #075E54;
+        }
+        .det{
+            border: 1px solid grey;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .det .sub-det{
+            margin: 0;
+            background-color: #075E54;
+        }
+        .but1 {
+            display: inline-block;
+            border: 2px solid #128C7E;
+            border-radius: 5px;
+            background-color: transparent;
+            box-shadow: 0px 6px 15px #128C7E;
+            padding: 0.5rem 1rem;
+        }
+        .but1:hover{
+            background-color: rgb(7, 94, 84, 0.5);
+            box-shadow: 0px 6px 30px #128C7E;
+        }
+        .but1 a{
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+        }
+        .but2 {
+            display: inline-block;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .but2:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .but2 a{
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .technology .container{
+            height: auto;
+            border: 1px solid grey;
+            box-shadow: 0 1px 7px antiquewhite;
+            color: antiquewhite;
+        }
+        .acci{
+            margin-left: 1rem;
+            border-bottom: 2px solid grey;
+        }
+        .accordion-button {
+            background-color: rgb(7, 94, 84);; /* Black */
+            color: #fff; /* White text */
+            border: 2px solid #131a1b;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color:rgb(7, 94, 84);
+            color: #131a1b; /* White text */
+            border: 2px solid #fff;
+        }
+        .accordion-button:hover,
+        .accordion-button:focus {
+            color: #fff;
+            background-color: rgb(7, 94, 84, 0.7);
+            box-shadow: 0px 6px 30px #128C7E;
+        }
+        .accordion ul{
+            background-color: #131a1b;
+            color: antiquewhite;
+        }
+
+        .contact .container{
+            height: auto;
+            border: 1px solid grey;
+            box-shadow: 0 1px 7px antiquewhite;
+            color: antiquewhite;
+        }
+        .contact a{
+            text-decoration: None;
+            color: antiquewhite;
+        }
+        #text-box{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-lg p-0">
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid me-2" src="images/ICON.png" width="50" height="40" alt="Logo">
+                <span class="name">Balamurugan</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggle">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#details">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#technology">Technologies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="details" id="details">
+            <h2 class="typed-text p-3 fs-2">Hi! I am Balamurugan..</h2>
+            <p class="additional-text fs-6">I'm currently pursuing my BE in Computer Science and Engineering from College of Engineering, Guindy. 
+                <br>I have a deep interest in technology, particularly in Python and its libraries like Flask, Tkinter, NumPy, Pandas.
+                <br>I have also developed a few projects using Python, which has allowed me to apply my knowledge and skills practically.
+                <br><br>When I'm not diving into tech, you can find me adding my touch to tracks in DAWs. I enjoy making familiar tunes my own.
+                <br><br>Feel free to connect with me if you want to discuss technology or collaborate on interesting projects!<br><br><br> </p>
+        </div>
+
+        <div class="technology" id="technology">
+            <div class="container">
+                <h3 class="head-p my-2 ps-3 fw-bold">Technologies I Use</h3>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+
+                        <div class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#item-1">
+                                <span class="fs-5 fw-lighter text-light me-3">Python</span>
+                                <img class="mt-1 img-fluid mx-4" src="images/PY1.png" height="25" width="25">
+                            </button>
+                        </div>
+                        <div class="collapse" id="item-1" data-bs-parent="#technology">
+                            <ul class="list-unstyled">
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">Tkinter</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="mt-1 img-fluid" src="images/TK1.png" height="50" width="50">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">Tkinter Library is used to build programs with UI</div>
+                                </li>
+                                
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">Flask</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="my-1 img-fluid" src="images/FL1.png" height="50" width="50">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">Flask Framework helps to connect FrontEnd with BackEnd</div>
+                                </li>
+
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">BS4</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="my-2 img-fluid ms-2" src="images/BS1.png" height="40" width="35">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">BeautifulSoup is used to perform WebScrapings</div>
+                                </li>
+
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">Numpy</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="img-fluid" src="images/NP1.png" height="50" width="50">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">NumPy is used to solve complex Linear Algebra</div>
+                                </li>
+
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">Pandas</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="my-2 img-fluid ms-2" src="images/PD1.png" height="30" width="25">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">Pandas is used to manipulate DataSets</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#item-2">
+                                <span class="fs-5 fw-lighter text-light">FrontEnd</span>
+                                <img class="mt-1 img-fluid mx-3" src="images/FE1.png" height="25" width="25">
+                            </button>
+                        </div>
+                        <div class="collapse" id="item-2" data-bs-parent="#technology">
+                            <ul class="list-unstyled">
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">HTML</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="mt-1 img-fluid" src="images/HT1.png" height="30" width="30">
+                                    </div>
+                                    <div class="my-3  col-sm-6 col-9 fs-6">HTML - The fundamental of every Websites</div>
+                                </li>
+                                
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">CSS</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="my-1 img-fluid" src="images/CS1.png" height="30" width="30">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">CSS Style Sheets are used to Style the Pages</div>
+                                </li>
+
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">BootStrap</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="my-2 img-fluid ms-2" src="images/BT1.png" height="30" width="30">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">BootStrap is a CSS Framework to ease the task of styling</div>
+                                </li>
+
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">JS</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="img-fluid" src="images/JS1.png" height="30" width="30">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">JS makes the website dynamic</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#item-3">
+                                <span class="fs-5 fw-lighter text-light">BackEnd</span>
+                                <img class="mt-1 img-fluid mx-4" src="images/BE1.png" height="25" width="25">
+                            </button>
+                        </div>
+                        <div class="collapse" id="item-3" data-bs-parent="#technology">
+                            <ul class="list-unstyled">
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">SQL</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="mt-1 img-fluid" src="images/SQ1.png" height="30" width="30">
+                                    </div>
+                                    <div class="my-3  col-sm-6 col-9 fs-6">SQL manages, queries, and manipulates relational databases</div>
+                                </li>
+                                
+                                <li class="row fs-6 acci align-items-center justify-content-center">
+                                    <div class="col-2 fs-5 fw-bold d-none d-sm-block">XAMPP</div>
+                                    <div class="col-sm-2 col-2">
+                                        <img class="my-1 img-fluid" src="images/XA1.png" height="30" width="30">
+                                    </div>
+                                    <div class="my-3 col-sm-6 col-9 fs-6">XAMPP is a cross-platform web server solution</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projects" id="projects">
+            <div class="container">
+                <h3 class="head-p my-2 ps-3 fw-bold">My Projects</h3>
+                <div class="row align-items-stretch justify-content-spaced text-center">
+                    <div class="fs-4 fw-bold col-md col-12 bg">
+                        <p class="mon mt-2 d-flex align-items-center justify-content-around">Feb 2024</p>
+                        <img class="img-fluid mb-5 mt-3 " src="images/PIC2.png" width="225" height="100">
+                        <div class="det m-0 p-0">
+                            <div class="sub-det m-0 p-0">
+                                <p class="fs-5 fw-bold mt-2 d-flex align-items-center justify-content-around">GUI Apps using Tkinter</p>
+                                <p class="fs-6 fw-bold mt-2 mx-4 d-flex align-items-center justify-content-around">Python | Tkinter | API</p>
+                            </div>
+                            <p class="bor fs-6 fw-light mt-3 mx-5 d-flex align-items-center justify-content-center">
+                            Developed three Python GUI applications
+                            using Tkinter: a To-Do List, a Weather
+                            Forecast app, and a Calculator,
+                            demonstrating proficiency in creating user friendly and functional desktop tools.
+                            </p>
+                            <div class="d-flex flex-column flex-md-row justify-content-center mb-1">
+                                <button class="but1 fs-6 px-5 m-3"><a href="https://github.com/BALAMURUGAN16SA/GUI_TKINTER.git" target="_blank">Github</a></button>
+                                <button class="but2 fs-6 p-2 m-3"><a href="https://drive.google.com/drive/folders/1-DChbE4SCaPun6bWZWIgv3wy4vfeKRX3" target="_blank">View Project</a></button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="fs-4 fw-bold col-md col-12 bg">
+                        <p class="mon fs-4 fw-bold mt-2 d-flex align-items-center justify-content-around">May 2024</p>
+                        <img class="img-fluid mb-5 mt-3" src="images/PIC1.png" width="225" height="100">
+                        <div class="det m-0 p-0">
+                            <div class="sub-det m-0 p-0">
+                                <p class="fs-5 fw-bold mt-2 d-flex align-items-center justify-content-around">Movie Ticket Booking System</p>
+                                <p class="fs-6 fw-bold mt-2 mx-1 d-flex align-items-center justify-content-around">Python | Flask | Xampp | BootStrap</p>
+                            </div>
+                            <p class="fs-6 fw-light mt-3 mx-4 d-flex align-items-center justify-content-center">
+                            Built a booking system,
+                            enabling User registration, ticket booking,
+                            seat selection.<br>
+                            At the Admin side, theater & movies
+                            management, and other admin tools were
+                            added, through a user-friendly interface
+                            </p>
+                            <div class="d-flex flex-column flex-md-row justify-content-center mb-1">
+                                <button class="but1 fs-6 px-5 m-3"><a href="https://github.com/BALAMURUGAN16SA/MOVIE_TICKETS_BOOKING.git" target="_blank">Github</a></button>
+                                <button class="but2 fs-6 p-2 m-3"><a href="https://drive.google.com/drive/folders/1-K9VmPlfiqEWsPgb5cyecfIoFRSldI5s" target="_blank">View Project</a></button>
+                            </div>
+                        </div>      
+                    </div>
+                    <div class="fs-4 fw-bold col-md col-12 bg">
+                        <p class="mon mt-2 d-flex align-items-center justify-content-around">Jul 2024</p>
+                        <img class="img-fluid mb-5 mt-3" src="images/PIC3.png" width="225" height="100">
+                        <div class="row align-items-stretch justify-content-spaced text-center det m-0 p-0">
+                            <div class="sub-det m-0 p-0">
+                                <p class="fs-5 fw-bold mt-2 d-flex align-items-center justify-content-around">Portfolio Website</p>
+                                <p class="fs-6 fw-bold mt-2 mx-4 d-flex align-items-center justify-content-around">HTML | Bootstrap | JS</p>
+                            </div>
+                            <p class="bor fs-6 fw-light mt-3 px-4 d-flex align-items-center justify-content-center">
+                            <br><br><br><br>That's what you are looking at!<br><br><br>
+                            </p>
+                            <div class="d-flex flex-column flex-md-row justify-content-center mb-1">
+                                <button class="but1 fs-6 px-5 m-3"><a href="https://github.com/BALAMURUGAN16SA/balamurugan16sa.github.io.git" target="_blank">Github</a></button>
+                                <button class="but2 fs-6 p-2 m-3"><a href="#">View Project</a></button>
+                            </div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <div class="container">
+                <h3 class="head-p my-2 ps-3 fw-bold">Connect with me</h3>
+                <div class="row align-items-center text-center my-3">
+                    <div class="col-sm bg ">
+                        <a href="https://x.com/BalamuruganSr16?t=dI_yo7g1OA70TiHqKFNAZA&s=08 " target="_blank">
+                            <span class="fs-6 p-3">Twitter</span>
+                            <img class="mt-1 img-fluid mx-4 my-1" src="images/TW1.png" height="30" width="30">
+                        </a>
+                    </div>
+
+                    <div class="col-sm bg ">
+                        <a href="https://github.com/BALAMURUGAN16SA" target="_blank">
+                            <span class="fs-6 p-3">Github</span>
+                            <img class="mt-1 img-fluid mx-4 my-1" src="images/GH1.png" height="30" width="30">
+                        </a>
+                    </div>
+
+                    <div class="col-sm bg">
+                        <a href="https://www.linkedin.com/in/balamurugan16sa/" target="_blank">
+                            <span class="fs-6 p-3">LinkedIn</span>
+                            <img class="mt-1 img-fluid mx-4 my-1" src="images/LI1.png" height="30" width="30">
+                        </a>
+                    </div>
+
+                    <div class="col-sm bg" id="msg">
+                        <button id="contact-button" class="btn">
+                            <span class="fs-6 p-3 text-light">Message Me</span>
+                            <img class="mt-1 img-fluid mx-4 my-1" src="images/MS1.png" height="17" width="17">
+                        </button>
+                        <div id="text-box" style="display: none;">
+                            <form id="contact-form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </form>
+                        </div>
+                    </div>    
+
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+    <script>
+        document.getElementById('contact-button').addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click from propagating to parent elements
+            var form = document.getElementById('text-box');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+    
+        // Optional: Close the form if clicking outside
+        document.addEventListener('click', function(event) {
+            var form = document.getElementById('text-box');
+            var button = document.getElementById('contact-button');
+            if (!form.contains(event.target) && !button.contains(event.target)) {
+                form.style.display = 'none';
+            }
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Retrieve form data
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            console.log(name, email, message);
+            // Send email using EmailJS
+            emailjs.send('service_k5jmekb', 'template_2tl7ssj', {
+                from_name: name,
+                from_email: email,
+                message: message
+            }).then(function(response) {
+                console.log('Success:', response);
+                alert('Your message has been sent!');
+                document.getElementById('contact-form').reset(); // Clear the form fields
+            }, function(error) {
+                console.log('Error:', error);
+                alert('There was an error sending your message. Please try again.');
+            });
+        });
+    </script>
+    
+</body>
+</html>
