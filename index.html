@@ -205,7 +205,7 @@
         }
 
         .mon {
-            width: 620px;  /* Fixed width */
+            width: 100%;  /* Fixed width */
             min-height: 30px; /* Minimum height to ensure consistency */
             text-align: center;
             border: 1px solid #128C7E;
@@ -250,7 +250,7 @@
         }
 
         .cert-img img {
-            width: 120px; /* Adjust size */
+            width: 70%; /* Adjust size */
             height: auto;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(255, 235, 205, 0.5);
@@ -268,7 +268,7 @@
         }
 
         .comp-img img {
-            width: 100%;
+            width: 70%;
             height: auto; 
             padding: 20px;
         }
@@ -276,27 +276,49 @@
             flex: 1;
             text-align: left;
         }
-
-
-        .but1 {
-            background-color: antiquewhite;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .but1 a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .but1:hover {
-            background-color: grey;
-            color: white;
-        }
-
         
+        .toast-message {
+            visibility: hidden;
+            min-width: 280px;
+            background-color: #333;
+            color: white;
+            text-align: left;
+            border-radius: 5px;
+            padding: 12px 16px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s, visibility 0.5s;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .toast-message.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: #ff3e3e;
+            width: 100%;
+            margin-top: 8px;
+            border-radius: 3px;
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .progress-bar.animate {
+            animation: reduceWidth 3s linear forwards;
+        }
+
+        @keyframes reduceWidth {
+            from { transform: scaleX(1); }
+            to { transform: scaleX(0); }
+        }
 
     </style>
 </head>
@@ -498,8 +520,8 @@
                                 Developed three Python GUI applications using Tkinter: a To-Do List, a Weather Forecast app, and a Calculator.
                             </p>
                             <div class="d-flex flex-column flex-md-row justify-content-center mb-1">
-                                <button class="but1 fs-6 px-5 m-3"><a href="https://github.com/BALAMURUGAN16SA/GUI_TKINTER.git" target="_blank">Github</a></button>
-                                <button class="but2 fs-6 p-2 m-3"><a href="https://drive.google.com/drive/folders/1-DChbE4SCaPun6bWZWIgv3wy4vfeKRX3" target="_blank">View Project</a></button>
+                                <a href="https://github.com/BALAMURUGAN16SA/GUI_TKINTER.git" target="_blank"><button class="color: antiquewhite; but1 fs-6 px-5 m-3" style="color: antiquewhite;">Github</button></a>
+                                <a href="https://drive.google.com/drive/folders/1-DChbE4SCaPun6bWZWIgv3wy4vfeKRX3" target="_blank"><button class="color: antiquewhite; but2 fs-6 p-2 m-3">View Project</button></a>
                             </div>
                         </div> 
                     </div>
@@ -516,8 +538,8 @@
                                 Built a booking system with user registration, ticket booking, and seat selection. Admin panel for theater management.
                             </p>
                             <div class="d-flex flex-column flex-md-row justify-content-center mb-1">
-                                <button class="but1 fs-6 px-5 m-3"><a href="https://github.com/BALAMURUGAN16SA/MOVIE_TICKETS_BOOKING.git" target="_blank">Github</a></button>
-                                <button class="but2 fs-6 p-2 m-3"><a href="https://drive.google.com/drive/folders/1-K9VmPlfiqEWsPgb5cyecfIoFRSldI5s" target="_blank">View Project</a></button>
+                                <a href="https://github.com/BALAMURUGAN16SA/MOVIE_TICKETS_BOOKING.git" target="_blank"><button class="but1 fs-6 px-5 m-3" style="color: antiquewhite;">Github</button></a>
+                                <a href="https://drive.google.com/drive/folders/1-K9VmPlfiqEWsPgb5cyecfIoFRSldI5s" target="_blank"><button class="but2 fs-6 p-2 m-3">View Project</button></a>
                             </div>
                         </div>      
                     </div>
@@ -537,8 +559,8 @@
                                 Built a Python-to-C++ Converter using Lex & Yacc, supporting functions, loops, and conditionals.
                             </p>
                             <div class="d-flex flex-column flex-md-row justify-content-center mb-1">
-                                <button class="but1 fs-6 px-5 m-3"><a href="https://github.com/Kris-05/Python-to-Cpp.git" target="_blank">Github</a></button>
-                                <button class="but2 fs-6 p-2 m-3"><a href="https://drive.google.com/file/d/1im8iIbC9sXzruylLwX_nygQazFxKYBCG/view?usp=drivesdk">View Project</a></button>
+                                <a href="https://github.com/Kris-05/Python-to-Cpp.git" target="_blank"><button class="but1 fs-6 px-5 m-3" style="color: antiquewhite;">Github</button></a>
+                                <a href="https://drive.google.com/file/d/1im8iIbC9sXzruylLwX_nygQazFxKYBCG/view?usp=drivesdk" target="_blank"><button class="but2 fs-6 p-2 m-3">View Project</button></a>
                             </div>
                         </div>
                     </div>
@@ -556,8 +578,8 @@
                                 <p></p>
                             </p>
                             <div class="d-flex flex-column flex-md-row justify-content-center mb-1">
-                                <button class="but1 fs-6 px-5 m-3"><a href="https://github.com/BALAMURUGAN16SA/balamurugan16sa.github.io.git" target="_blank">Github</a></button>
-                                <button class="but2 fs-6 p-2 m-3"><a href="#">View Project</a></button>
+                                <a href="https://github.com/BALAMURUGAN16SA/balamurugan16sa.github.io.git" target="_blank"><button class="but1 fs-6 px-5 m-3" style="color: antiquewhite;">Github</button></a>
+                                <a href="#"><button class="but2 fs-6 p-2 m-3">View Project</button></a>
                             </div>
                         </div>
                     </div>
@@ -567,47 +589,58 @@
             </div>
         </div>
 
+        <!-- Certifications Section -->
         <div class="certifications" id="certifications">
             <div class="container">
                 <h3 class="head-p my-2 ps-3 fw-bold">Certifications</h3>
-        
+
                 <div class="timeline-box">
                     <div class="timeline">
                         <!-- Certificate 1 -->
-                        <div class="event cert">
-                            <div class="content">
-                                <p class="mon mt-2 d-flex align-items-center justify-content-around">Nov 2022</p>
-                                <h3 class="fs-5 fw-bold d-flex align-items-center justify-content-around">Advanced Diploma in Python and CPP Programming (ADPP)</h3>
-                                <p class="fs-6 fw-light d-flex align-items-center justify-content-center">
-                                    Certified in CPP and Python programming with expertise in OOP and file handling
-                                </p>
-                                <div class="d-flex justify-content-center">
-                                    <button class="but1 fs-6 px-4 m-3">
-                                        <a href="images/C1.jpg" target="_blank">View Certificate</a>
-                                    </button>
-                                </div>
+                        <div class="event cert d-flex flex-wrap align-items-center text-center text-md-start" 
+                            style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+
+                            <!-- Image (Right on large screens, Above on small screens) -->
+                            <div class="cert-img" style="flex: 1; min-width: 250px; text-align: center; order: -1;">
+                                <img src="images/C1.jpg" alt="Competition Image" 
+                                    style="max-width: 100%; height: auto; border-radius: 10px;">
                             </div>
-                            <div class="cert-img">
-                                <img src="images/C1.jpg" alt="AWS Certificate">
+
+                            <!-- Content (Text on Left, Below Image on Small Screens) -->
+                            <div class="content" style="flex: 1; min-width: 250px; padding: 10px; order: 2;">
+                                <p class="mon mt-2">Nov 2022</p>
+                                <h3 class="fs-5 fw-bold">Advanced Diploma in Python and CPP Programming (ADPP)</h3>
+                                <p class="fs-6 fw-light">Certified in CPP and Python programming with expertise in OOP and file handling</p>
+                                <a href="images/C1.jpg" target="_blank">
+                                    <button class="but1 fs-6 px-4 mt-2" style="color: antiquewhite; width: 100%; max-width: 180px;">
+                                        View Certificate
+                                    </button>
+                                </a>
                             </div>
                         </div>
-        
+
+
+
                         <!-- Certificate 2 -->
-                        <div class="event">
-                            <div class="content">
-                                <p class="mon mt-2 d-flex align-items-center justify-content-around">Mar 2025</p>
-                                <h3 class="fs-5 fw-bold d-flex align-items-center justify-content-around">Udemy - Mastering Datastructures and Algorithms</h3>
-                                <p class="fs-6 fw-light d-flex align-items-center justify-content-center">
-                                    Certified in solving Datastructures and Algorithms using CPP
-                                </p>
-                                <div class="d-flex justify-content-center">
-                                    <button class="but1 fs-6 px-4 m-3">
-                                        <a href="images/C2.jpg" target="_blank">View Certificate</a>
-                                    </button>
-                                </div>
+                        <div class="event cert d-flex flex-wrap align-items-center text-center text-md-start" 
+                            style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+
+                            <!-- Image (Right on large screens, Above on small screens) -->
+                            <div class="cert-img" style="flex: 1; min-width: 250px; text-align: center; order: -1;">
+                                <img src="images/C2.jpg" alt="Competition Image" 
+                                    style="max-width: 100%; height: auto; border-radius: 10px;">
                             </div>
-                            <div class="cert-img">
-                                <img src="images/C2.jpg" alt="AWS Certificate">
+
+                            <!-- Content (Text on Left, Below Image on Small Screens) -->
+                            <div class="content" style="flex: 1; min-width: 250px; padding: 10px; order: 2;">
+                                <p class="mon mt-2">Mar 2025</p>
+                                <h3 class="fs-5 fw-bold">Udemy - Mastering Datastructures and Algorithms</h3>
+                                <p class="fs-6 fw-light">Certified in solving Datastructures and Algorithms using CPP</p>
+                                <a href="images/C2.jpg" target="_blank">
+                                    <button class="but1 fs-6 px-4 mt-2" style="color: antiquewhite; width: 100%; max-width: 180px;">
+                                        View Certificate
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -615,73 +648,105 @@
             </div>
         </div>
 
+        <!-- Competitions Section -->
         <div class="competitions" id="competitions">
             <div class="container">
                 <h3 class="head-p my-2 ps-3 fw-bold">Competitions</h3>
-        
+
                 <div class="timeline-box">
                     <div class="timeline">
                         <!-- Competition 1 -->
-                        <div class="event comp">
-                            <div class="comp-img">
-                                <img src="images/CO1.jpg" alt="Competition Image">
+                        <div class="event comp d-flex flex-wrap align-items-center text-center text-md-start" 
+                            style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                            
+                            <!-- Image (Right on large screens, Above date on small screens) -->
+                            <div class="comp-img order-1 order-md-2" style="flex: 1; min-width: 250px; text-align: center;">
+                                <img src="images/CO1.jpg" alt="Competition Image" 
+                                    style="max-width: 100%; height: auto; border-radius: 10px;">
                             </div>
-                            <div class="content">
-                                <p class="mon mt-2">Feb 2025</p>
+
+                            <!-- Content -->
+                            <div class="content order-2 order-md-1 text-center text-md-start" style="flex: 1; min-width: 250px; padding: 10px;">
                                 <h3 class="fs-5 fw-bold">ByteBash (Hackathon) Winner - Kurukshetra'25</h3>
-                                <p class="fs-6 fw-light">
-                                    National level Intercollege Hackathon for building an Adaptive Assessment System.
-                                </p>
-                                <div class="d-flex justify-content-start">
-                                    <button class="but1 fs-6 px-4 m-3">
-                                        <a href="images/C1.jpg" target="_blank">View Certificate</a>
-                                    </button>
+                                <p class="fs-6 fw-light">National-level intercollege hackathon for building an Adaptive Assessment System using LLMs.</p>
+                                <p class="mon mt-2">Feb 2025</p> <!-- Date Below Image on Small Screens -->
+                                <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                                    <a href="images/CO1.jpg" target="_blank">
+                                        <button class="but1 fs-6 px-4 mt-2" style="color: antiquewhite; width: 100%; max-width: 180px;">
+                                        View Certificate
+                                        </button>
+                                    </a>
+                                    <a href="https://www.linkedin.com/posts/balamurugan16sa_bny-hackathon-machinelearning-activity-7311347101647441920-pUU3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEOCT8MBf06xGj9-GGtGDamkJytZbUtJja8" target="_blank">
+                                        <button class="but2 fs-6 px-4 mt-2" style="width: 100%; max-width: 180px;">
+                                            View On LinkedIn
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- Competition 2 -->
-                        <div class="event comp">
-                            <div class="comp-img">
-                                <img src="images/CO2.jpg" alt="Competition Image">
+                        <div class="event comp d-flex flex-wrap align-items-center text-center text-md-start" 
+                            style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                            
+                            <!-- Image -->
+                            <div class="comp-img order-1 order-md-2" style="flex: 1; min-width: 250px; text-align: center;">
+                                <img src="images/CO2.jpg" alt="Competition Image" 
+                                    style="max-width: 100%; height: auto; border-radius: 10px;">
                             </div>
-                            <div class="content">
-                                <p class="mon mt-2">Mar 2025</p>
+
+                            <!-- Content -->
+                            <div class="content order-2 order-md-1 text-center text-md-start" style="flex: 1; min-width: 250px; padding: 10px;">
                                 <h3 class="fs-5 fw-bold">Joker's Gamble (DSA Coding Challenge) Runner - ITRIX'25</h3>
-                                <p class="fs-6 fw-light">
-                                    An intense DSA coding competition testing problem-solving skills.
-                                </p>
-                                <div class="d-flex justify-content-start">
-                                    <button class="but1 fs-6 px-4 m-3">
-                                        <a href="images/CO2.jpg" target="_blank">View Certificate</a>
-                                    </button>
+                                <p class="fs-6 fw-light">An intense DSA coding competition testing problem-solving skills.</p>
+                                <p class="mon mt-2">Mar 2025</p> <!-- Date Below Image on Small Screens -->
+                                <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                                    <a href="images/CO2.jpg" target="_blank">
+                                        <button class="but1 fs-6 px-4 mt-2" style="color: antiquewhite; width: 100%; max-width: 180px;">
+                                            View Certificate
+                                        </button>
+                                    </a>
+                                        <button class="but2 fs-6 px-4 mt-2 ml-4" style="width: 100%; max-width: 180px;" onclick="checkLink(event)">
+                                            View On LinkedIn
+                                        </button>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Competition 3 -->
-                        <div class="event comp">
-                            <div class="comp-img">
-                                <img src="images/CO3.jpg" alt="Competition Image">
+                        <div class="event comp d-flex flex-wrap align-items-center text-center text-md-start" 
+                            style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+                            
+                            <!-- Image -->
+                            <div class="comp-img order-1 order-md-2" style="flex: 1; min-width: 250px; text-align: center;">
+                                <img src="images/CO3.jpg" alt="Competition Image" 
+                                    style="max-width: 100%; height: auto; border-radius: 10px;">
                             </div>
-                            <div class="content">
-                                <p class="mon mt-2">Mar 2025</p>
+
+                            <!-- Content -->
+                            <div class="content order-2 order-md-1 text-center text-md-start" style="flex: 1; min-width: 250px; padding: 10px;">
                                 <h3 class="fs-5 fw-bold">Inverse Coding Runner - ITRIX'25</h3>
-                                <p class="fs-6 fw-light">
-                                    A challenging competition focused on reverse engineering logic and deriving algorithms from given outputs
-                                </p>
-                                <div class="d-flex justify-content-start">
-                                    <button class="but1 fs-6 px-4 m-3">
-                                        <a href="images/CO3.jpg" target="_blank">View Certificate</a>
-                                    </button>
+                                <p class="fs-6 fw-light">A challenging competition focused on reverse engineering logic and deriving algorithms from given outputs.</p>
+                                <p class="mon mt-2">Mar 2025</p> <!-- Date Below Image on Small Screens -->
+                                <div class="d-flex flex-wrap justify-content-center gap-2 w-100">
+                                    <a href="images/CO3.jpg" target="_blank">
+                                        <button class="but1 fs-6 px-4 mt-2" style="color: antiquewhite; width: 100%; max-width: 180px;">
+                                            View Certificate
+                                        </button>
+                                    </a>
+                                    
+                                        <button class="but2 fs-6 px-4 mt-2 ml-4" style="width: 100%; max-width: 180px;" onclick="checkLink(event)">
+                                            View On LinkedIn
+                                        </button>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="contact" id="contact">
             <div class="container">
                 <h3 class="head-p my-2 ps-3 fw-bold">Connect with me</h3>
@@ -733,10 +798,38 @@
 
                 </div>
             </div>
-        </div>        
+        </div>  
+        
+        <div id="toast" class="toast-message">
+            <span id="toast-text">LinkedIn post on the way.. Link will be updated shortly</span>
+            <div class="progress-bar"></div>
+        </div>
     </div>
     
     <script>
+       function checkLink(event) {
+            event.preventDefault(); // Prevents the button from navigating anywhere
+
+            showToast("LinkedIn post on the way.. Link will be updated shortly");
+        }
+
+        function showToast(message) {
+            let toast = document.getElementById("toast");
+            let toastText = document.getElementById("toast-text");
+            let progressBar = toast.querySelector(".progress-bar");
+
+            toastText.innerText = message;
+            toast.classList.add("show");
+            progressBar.classList.add("animate");
+
+            // Hide toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.remove("show");
+                progressBar.classList.remove("animate");
+            }, 3000);
+        }
+
+
         document.getElementById('contact-button').addEventListener('click', function(event) {
             event.stopPropagation(); // Prevent the click from propagating to parent elements
             var form = document.getElementById('text-box');
